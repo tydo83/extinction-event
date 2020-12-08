@@ -21,14 +21,21 @@ for(const image of collapseImages) {
     })
 }
 
+// meteoButton.addEventListener('click', () => {
+//     for(const crossItem of crossList) {
+//         crossItem.style.textDecoration = "line-through"
+//     }
+//     for(const fadeItem of fadeList) {
+//        fadeItem.style.opacity = 0;
+//     }
+//     for(const image of collapseImages) {
+//         image.style.width = "0px";
+//     }
+// })
+
+// forEach version
 meteoButton.addEventListener('click', () => {
-    for(const crossItem of crossList) {
-        crossItem.style.textDecoration = "line-through"
-    }
-    for(const fadeItem of fadeList) {
-       fadeItem.style.opacity = 0;
-    }
-    for(const image of collapseImages) {
-        image.style.width = "0px";
-    }
-})
+    crossList.forEach(element => element.style.textDecoration = "line-through")
+    fadeList.forEach(element => element.style.opacity = 0)
+    collapseImages.forEach(element => element.style.width = "0px")
+    })
